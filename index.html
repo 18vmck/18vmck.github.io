@@ -3,6 +3,7 @@
     <head>
         <title>Vanya Kootchin</title>
         <style>
+            canvas { background:  rgb(255, 253, 253);; display: block; margin: 0 auto; }
             body {
                 background-color: rgb(255, 253, 253);
                 }
@@ -45,7 +46,41 @@
         at 
         Queen's University
     </p>
+<canvas id="myCanvas" width="800" height="40"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
 
+    var x = canvas.width/2;
+    var y = canvas.height/2;
+
+    var ballRadius = 10;
+   
+    
+
+    function draw() {
+        x++;
+        if(x>canvas.width)  {
+            x = 0;
+        }
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawBall();
+        requestAnimationFrame(draw);
+    }
+
+    function drawBall()  {
+        ctx.beginPath();
+        ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+        ctx.fillStyle = "#FFD700";
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    draw();
+
+
+</script>
+<br>
 <form action="./index.html">
     <input type="submit" value="le fins" />
 </form>
