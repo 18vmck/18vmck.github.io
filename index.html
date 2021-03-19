@@ -27,8 +27,12 @@
                 color: rgb(54, 54, 54);
                 font-family: 'Times New Roman', Times, serif;
                 }
+            form    {
+                background-color: rgb(255, 253, 253);
+            }
             input    {
                 color:rgb(0, 0, 0);
+                background-color: rgb(255, 253, 253);
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-weight: bold;
                 background-color: rgb(234, 237, 238);
@@ -46,34 +50,68 @@
         at 
         Queen's University
     </p>
+<input id="clickme" type="button" value="Make sin wave" onclick="draw()">
 <canvas id="myCanvas" width="800" height="100"></canvas>
+
 <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
 
+    // Ball Attributes
+    var ballColor = "#FF0000";
+    var tailLength = 2;
+    var ballRadius = 2;
+    var velocity = 1;
+
+    // Make it start in the middle of the canvas
+    // Mains
     var x = canvas.width/2;
     var y = canvas.height/2;
-    var xv = 1;
-    var yv = 1;
+    var xv = velocity;
+    var yv = velocity;
+    // Trail attributes
+    var tailx = x;
+    var taily = y;
+    var tailxv = velocity;
+    var tailyv = velocity;
 
-    var ballRadius = 10;
-   
+
+
     
+
+    // Counter for tail
+    var count = 0;
 
     function draw() {
         x = x + xv;
         y = y + yv;
+        if(count == tailLength)  {
+            tailx = tailx + xv;
+            taily = taily+yv;
+        }
 
         // Bouncing
-        if(x+ballRadius == canvas.width) xv = -xv;
-        if(x-ballRadius == 0) xv = -xv;
-        if(y+ballRadius == canvas.height) yv = -yv;
-        if(y-ballRadius == 0) yv = -yv;
+        // Main
+        if(x+ballRadius > canvas.width)     xv = -xv;
+        if(x-ballRadius < 0)                xv = -xv;
+        if(y+ballRadius > canvas.height)    yv = -yv;
+        if(y-ballRadius < 0)                yv = -yv;
+        // Tails
+        if(tailx+ballRadius > canvas.width) tailxv = -tailxv;
+        if(tailx-ballRadius < 0)            tailxv = -tailxv;
+        if(taily+ballRadius > canvas.height)tailyv = -tailyv;
+        if(taily-ballRadius < 0)            tailyv = -tailyv;
+        // end of bouncing ifs.
 
-        // Reset and Draw
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Getting rid of the tail
+        if (count == tailLength) {
+            clearTail();
+        }
+        else    {
+            count++;
+        }
         drawBall();
-
+        
         // Looping
         requestAnimationFrame(draw);
     }
@@ -81,18 +119,33 @@
     function drawBall()  {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-        ctx.fillStyle = "#FFD700";
+        ctx.fillStyle = ballColor;
         ctx.fill();
         ctx.closePath();
     }
 
-    draw();
+    function drawTailBall() {
+        ctx.beginPath();
+        ctx.arc(tailx, taily, ballRadius, 0, Math.PI*2);
+        ctx.fillStyle = ballColor;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    function clearTail()  {
+        var prevColor = ballColor;
+        ballColor = "#FFFFFF";
+        ballRadius++;
+        drawTailBall();
+        ballRadius--;
+        ballColor = prevColor;
+    }
 
 
 </script>
 <br>
 <form action="./index.html">
-    <input type="submit" value="le fins" />
+    <input type="submit" value="Reset" />
 </form>
 
 </center>
