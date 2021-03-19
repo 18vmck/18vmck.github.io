@@ -46,25 +46,35 @@
         at 
         Queen's University
     </p>
-<canvas id="myCanvas" width="800" height="40"></canvas>
+<canvas id="myCanvas" width="800" height="100"></canvas>
 <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
 
     var x = canvas.width/2;
     var y = canvas.height/2;
+    var xv = 1;
+    var yv = 1;
 
     var ballRadius = 10;
    
     
 
     function draw() {
-        x++;
-        if(x>canvas.width)  {
-            x = 0;
-        }
+        x = x + xv;
+        y = y + yv;
+
+        // Bouncing
+        if(x+ballRadius == canvas.width) xv = -xv;
+        if(x-ballRadius == 0) xv = -xv;
+        if(y+ballRadius == canvas.height) yv = -yv;
+        if(y-ballRadius == 0) yv = -yv;
+
+        // Reset and Draw
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBall();
+
+        // Looping
         requestAnimationFrame(draw);
     }
 
