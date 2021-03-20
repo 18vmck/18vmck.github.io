@@ -2,30 +2,12 @@
 <html lang="en" style="height: 100%" class="translate-ltr">
     <head>
         <title>Homepage</title>
-        <style>
-               body {
-                background-color: rgb(255, 253, 253);
-                }
-        h1   {
-            color: rgb(0, 0, 0);
-            font-family: 'Verdana';
-            }
-        p    {
-            color: rgb(54, 54, 54);
-            font-family: 'Arial';
-            }
-        input    {
-            color:rgb(0, 0, 0);
-            font-family: 'Courier New';
-            font-weight: bold;
-            border: 2px solid #DDDDDD;
-        }
-
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-     <center><h1>JavaScript Testing Page</h1></center>
+     <center><h1>JavaScript Testing Page</h1>
      <input id="clickme" type="button" value="Click to dot!" onclick="Toast()">
+    </center>
      <p id="output"></p>
      <canvas id="myCanvas" width="240" height="160"></canvas>
 
@@ -40,7 +22,7 @@
         function drawBall()  {
         ctx.beginPath();
         ctx.arc(canvas.width/2, canvas.height/2, canvas.width/4, 0, Math.PI*2);
-        ctx.fillStyle = "#FFD700";
+        ctx.fillStyle = "#0000FF";
         ctx.fill();
         ctx.closePath();
     }

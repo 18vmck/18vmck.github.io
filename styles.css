@@ -1,0 +1,47 @@
+
+body {
+    background-color: rgb(255, 253, 253);
+    }
+h1 { 
+    font-family: Helvetica, sans-serif, Arial;
+    font-size: 40px; 
+    padding: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: lighter;
+    line-height: 0px; 
+}
+h2   {
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    }
+h3  {
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+p    {
+    color: rgb(54, 54, 54);
+    font-family: 'Times New Roman', Times, serif;
+    }
+form    {
+    background-color: rgb(255, 253, 253);
+}
+input    {
+    background-color: #d3aa93; 
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 1px;
+    transition-duration: 0.4s;
+}
+input:hover {
+    background-color: #dfbba6; 
+    color: rgb(255, 255, 255);
+}
+canvas { 
+    background:  rgb(212, 212, 212);; display: block; margin: 0 auto;
+    border: 1px solid #000000;
+     }

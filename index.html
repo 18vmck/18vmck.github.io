@@ -1,154 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <title>Vanya Kootchin</title>
-        <style>
-            canvas { background:  rgb(255, 253, 253);; display: block; margin: 0 auto; }
-            body {
-                background-color: rgb(255, 253, 253);
-                }
-            h1 { 
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                font-size: 98px; 
-                font-style: normal;
-                font-variant: normal;
-                font-weight: lighter;
-                line-height: 0px; 
-            }
-            h2   {
-                color: rgb(0, 0, 0);
-                font-family: 'Times New Roman', Times, serif;
-                }
-            h3  {
-                color: rgb(0, 0, 0);
-                font-family: 'Times New Roman', Times, serif;
-            }
-            p    {
-                color: rgb(54, 54, 54);
-                font-family: 'Times New Roman', Times, serif;
-                }
-            form    {
-                background-color: rgb(255, 253, 253);
-            }
-            input    {
-                color:rgb(0, 0, 0);
-                background-color: rgb(255, 253, 253);
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-weight: bold;
-                background-color: rgb(234, 237, 238);
-                border: 0px solid #DDDDDD;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 <body>
 <center>
 <h1>Vanya Kootchin</h1>
 <h2>Homepage</h2>
-
     <p style="font: Verdana; font-style: italic;">
-        Computer Engineering Student
-        at 
-        Queen's University
+        Computer Engineering Student at Queen's University
     </p>
-<input id="clickme" type="button" value="Make sin wave" onclick="draw()">
-<canvas id="myCanvas" width="800" height="100"></canvas>
-
-<script>
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-
-    // Ball Attributes
-    var ballColor = "#FF0000";
-    var tailLength = 2;
-    var ballRadius = 2;
-    var velocity = 1;
-
-    // Make it start in the middle of the canvas
-    // Mains
-    var x = canvas.width/2;
-    var y = canvas.height/2;
-    var xv = velocity;
-    var yv = velocity;
-    // Trail attributes
-    var tailx = x;
-    var taily = y;
-    var tailxv = velocity;
-    var tailyv = velocity;
+<p> </p>
 
 
-
-    
-
-    // Counter for tail
-    var count = 0;
-
-    function draw() {
-        x = x + xv;
-        y = y + yv;
-        if(count == tailLength)  {
-            tailx = tailx + xv;
-            taily = taily+yv;
-        }
-
-        // Bouncing
-        // Main
-        if(x+ballRadius > canvas.width)     xv = -xv;
-        if(x-ballRadius < 0)                xv = -xv;
-        if(y+ballRadius > canvas.height)    yv = -yv;
-        if(y-ballRadius < 0)                yv = -yv;
-        // Tails
-        if(tailx+ballRadius > canvas.width) tailxv = -tailxv;
-        if(tailx-ballRadius < 0)            tailxv = -tailxv;
-        if(taily+ballRadius > canvas.height)tailyv = -tailyv;
-        if(taily-ballRadius < 0)            tailyv = -tailyv;
-        // end of bouncing ifs.
-
-        // Getting rid of the tail
-        if (count == tailLength) {
-            clearTail();
-        }
-        else    {
-            count++;
-        }
-        drawBall();
-        
-        // Looping
-        requestAnimationFrame(draw);
-    }
-
-    function drawBall()  {
-        ctx.beginPath();
-        ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-        ctx.fillStyle = ballColor;
-        ctx.fill();
-        ctx.closePath();
-    }
-
-    function drawTailBall() {
-        ctx.beginPath();
-        ctx.arc(tailx, taily, ballRadius, 0, Math.PI*2);
-        ctx.fillStyle = ballColor;
-        ctx.fill();
-        ctx.closePath();
-    }
-
-    function clearTail()  {
-        var prevColor = ballColor;
-        ballColor = "#FFFFFF";
-        ballRadius++;
-        drawTailBall();
-        ballRadius--;
-        ballColor = prevColor;
-    }
-
-
-</script>
+<p>____________________________________________________</p>
 <br>
-<form action="./index.html">
-    <input type="submit" value="Reset" />
-</form>
-
 </center>
+
+<div class="buttons">
+    <form action="./brickBreaker.html">
+    <input type="submit" value="BrickBreaker"/>
+    </form>
+    <form action="./ip.html">
+        <input type="submit" value="IP Config Page" />
+    </form>
+    <form action="./jsTesting.html">
+        <input type="submit" value="JavaScript Testing" />
+    </form>
+</div>
+<style>
+    .buttons form   {
+        display: inline-block;
+    }
+    .buttons    {
+        display: table; margin:0 auto;
+    }
+</style>
+
+
 </body>
 
 </html>

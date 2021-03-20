@@ -4,42 +4,13 @@
         <title>
             IP Config Page
         </title>
-        <style>
-            body {
-                background-color: rgb(255, 253, 253);
-                }
-            h1   {
-                color: rgb(0, 0, 0);
-                font-family: 'Verdana';
-                margin: auto;
-                }
-            h2   {
-                color: rgb(0, 0, 0);
-                font-family: 'Verdana';
-                }
-            h3  {
-                color: rgb(0, 0, 0);
-                font-family: 'Verdana';
-            }
-            p    {
-                color: rgb(54, 54, 54);
-                font-family: 'Arial';
-                border: 2px solid #DDDDDD;
-                padding-left: 3px;
-                }
-            input    {
-                color:rgb(0, 0, 0);
-                font-family: 'Courier New';
-                font-weight: bold;
-                background-color: rgb(234, 237, 238);
-                border: 10px solid #DDDDDD;
-            }
-    
-            </style>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 <body>
-    <center><h1>IP Config Page</h1></center>
+    <center><h1>IP Config Page</h1>
     <h3>Ip information:<br></h3>
+</center>
+    <p id="data"> </p>
     <script>
         fetch('/ipinfo')
         .then(function (response) {
@@ -52,9 +23,9 @@
         }).catch(function (err) {
             // There was an error
             console.warn('Something went wrong.', err);
+            document.getElementById("data").innerHTML="<center>"+"Cannot get IP information when hosting without local Node.js server" + "</center>"
         });
     </script>
-    <p id="data"></p>
     <center>
     <form action="./index.html">
         <input type="submit" value="Return to Homepage" />
