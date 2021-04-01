@@ -6,40 +6,68 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 <body>
-<center>
-<h1>Vanya Kootchin</h1>
-<h2>Homepage</h2>
-    <p style="font: Verdana; font-style: italic;">
-        Computer Engineering Student at Queen's University
-    </p>
-<p> </p>
 
 
-<p>____________________________________________________</p>
-<br>
-<br>
-</center>
+    <div class="heading" >
+        <p style="font-family: titillium_webextralight";>604-364-1809 | Vancouver, British Columbia</p>
+        <p><a href="mailto:18vmck@queensu.ca">18vmck@queensu.ca </a></p>
+        <h1>Vanya Kootchin</h1>
+        <p style="font-family: titillium_weblight_italic;">Computer Engineering Student at Queen's University</p>
+    </div>
+   <style>
+       .heading {
+           text-align: center;
+       }
+       .heading a:link {
+           color:#192734;
+       }
+   </style>
 
-<div class="buttons">
-    <form action="./brickBreaker.html">
-    <input type="submit" value="BrickBreaker"/>
-    </form>
-    <form action="./ip.html">
-        <input type="submit" value="IP Config Page" />
-    </form>
-    <form action="./jsTesting.html">
-        <input type="submit" value="JavaScript Testing" />
-    </form>
-</div>
-<style>
-    .buttons form   {
+    <div class="info">
+        <p><a href="./VanyaKootchin-Resume.pdf">Resume</a></p>
+        <p><a href="https://linkedin.com/in/vanya-kootchin-a535b7198">LinkedIn</a></p>    
+    </div>
+
+
+    <style>
+
+    .info   {
+        text-align: center;
+    }
+
+    .info p {
+        background-color: #7f7f7f; 
+        border: 1px solid rgb(255, 255, 255);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 10px;
+        transition-duration: 0.4s;
         display: inline-block;
+        width: 15%; /* three boxes (use 25% for four, and 50% for two, etc) */
+        padding: 10px;
     }
-    .buttons    {
-        display: table; margin:0 auto;
-    }
-</style>
+    </style>
 
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url("LandscapeSide.jpg");
+        
+            /* Set a specific height */
+            min-height: 500px;
+        
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        </style>
+        
+    <!-- Container element -->
+    <div class="parallax"></div>
 
 </body>
 
