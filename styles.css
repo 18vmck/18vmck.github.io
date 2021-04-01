@@ -116,8 +116,8 @@ a:active {
     
     @font-face {
         font-family: 'titillium_webextralight';
-        src: url('https://18vmck.github.io/WebFontKit/titilliumweb-extralight-webfont.woff2') format('woff2'),
-             url('https://18vmck.github.io/WebFontKit/titilliumweb-extralight-webfont.woff') format('woff');
+        src: url('/WebFontKit/titilliumweb-extralight-webfont.woff2'') format('woff2'),
+             url('/WebFontKit/titilliumweb-extralight-webfont.woff2'') format('woff');
         font-weight: normal;
         font-style: normal;
     
