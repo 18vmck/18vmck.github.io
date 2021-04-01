@@ -65,91 +65,11 @@ a:active {
       }
 
 /*! Adding custom fonts*/
-<<<<<<< HEAD
     
     @font-face {
         font-family: 'titillium_webextralight';
         src: url('../fonts/titilliumweb-extralight-webfont.woff2') format('woff2'),
              url('../fonts/titilliumweb-extralight-webfont.woff') format('woff');
-=======
-
-     @font-face {
-        font-family: 'titillium_webblack';
-        src: url('https://18vmck.github.io/WebFontKit/titilliumweb-black-webfont.woff2') format('woff2'),
-             url('../18vmck.github.io/WebFontKit/titilliumweb-black-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_webblack';
-        src: url('../18vmck.github.io/WebFontKit/titilliumweb-black-webfont.woff2') format('woff2'),
-             url('../18vmck.github.io/WebFontKit/titilliumweb-black-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_webbold';
-        src: url('../18vmck.github.io/WebFontKit/titilliumweb-bold-webfont.woff2') format('woff2'),
-             url('../18vmck.github.io/WebFontKit/titilliumweb-bold-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_webbold_italic';
-        src: url('./WebFontKit/titilliumweb-bolditalic-webfont.woff2') format('woff2'),
-             url('./WebFontKit/titilliumweb-bolditalic-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_webextralight';
-        src: url('/WebFontKit/titilliumweb-extralight-webfont.woff2'') format('woff2'),
-             url('/WebFontKit/titilliumweb-extralight-webfont.woff2'') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_webXLtIt';
-        src: url('https://18vmck.github.io/WebFontKit/titilliumweb-extralightitalic-webfont.woff2') format('woff2'),
-             url('https://18vmck.github.io/WebFontKit/titilliumweb-extralightitalic-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_webitalic';
-        src: url('https://18vmck.github.io/WebFontKit/titilliumweb-italic-webfont.woff2') format('woff2'),
-             url('https://18vmck.github.io/WebFontKit/titilliumweb-italic-webfont.woff') format('woff');
->>>>>>> 89c46b36493059b7be1bc5e834cfe2cc6e71bae7
         font-weight: normal;
         font-style: normal;
     
@@ -157,66 +77,5 @@ a:active {
 
     
     
-<<<<<<< HEAD
 
     
-=======
-    
-    
-    @font-face {
-        font-family: 'titillium_weblight';
-        src: url('https://18vmck.github.io/WebFontKit/titilliumweb-light-webfont.woff2') format('woff2'),
-             url('https://18vmck.github.io/WebFontKit/titilliumweb-light-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_weblight_italic';
-        src: url('./WebFontKit/titilliumweb-lightitalic-webfont.woff2') format('woff2'),
-             url('./WebFontKit/titilliumweb-lightitalic-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_webregular';
-        src: url('./WebFontKit/titilliumweb-regular-webfont.woff2') format('woff2'),
-             url('./WebFontKit/titilliumweb-regular-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_websemibold';
-        src: url('./WebFontKit/titilliumweb-semibold-webfont.woff2') format('woff2'),
-             url('./WebFontKit/titilliumweb-semibold-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
-    
-    
-    
-    
-    @font-face {
-        font-family: 'titillium_websemibold_italic';
-        src: url('./WebFontKit/titilliumweb-semibolditalic-webfont.woff2') format('woff2'),
-             url('./WebFontKit/titilliumweb-semibolditalic-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    
-    }
->>>>>>> 89c46b36493059b7be1bc5e834cfe2cc6e71bae7
