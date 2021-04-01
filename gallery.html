@@ -15,10 +15,128 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 <body>
+    <style>
+        div.wrapper {
+            text-align: center;
+        }
+        div.gallery {
+          margin: 5px;
+          border: 0px solid #ccc;
+          display: inline-block;
+          width: 180px;
+          padding: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        
+        div.gallery:hover {
+          opacity: 0.5;
+          transition-duration: 0.5s;
+        }
+        
+        div.gallery img {
+          width: 100%;
+          object-fit: cover;
+        }
+        
+        div.desc {
+          padding: 15px;
+          text-align: center;
+          font-family: 'TilXL';
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="wrapper">
+        <div class="gallery">
+          <a target="_blank" href="images/mandog.jpg">
+            <img src="images/mandog.jpg" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">Larson Bay</div>
+        </div>
+        
+        <div class="gallery">
+          <a target="_blank" href="images/snow.jpg">
+            <img src="images/snow.jpg" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc">The Caribou</div>
+        </div>
+        
+        <div class="gallery">
+          <a target="_blank" href="images/om.jpg">
+            <img src="images/om.jpg" alt="Northern Lights" width="600" height="400">
+          </a>
+          <div class="desc">Smoke Park</div>
+        </div>
+        
+        <div class="gallery">
+          <a target="_blank" href="images/SquamSeriesBackGround.jpg">
+            <img src="images/SquamSeriesBackGround.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">The Elaho</div>
+        </div>
+        </div>
 
-    
+        <div class="wrapper">
+            <div class="gallery">
+              <a target="_blank" href="images/brohm.jpg">
+                <img src="images/brohm.jpg" alt="Cinque Terre" width="600" height="400">
+              </a>
+              <div class="desc">Brohm Lake</div>
+            </div>
+            
+            <div class="gallery">
+              <a target="_blank" href="images/eetri.jpg">
+                <img src="images/eetri.jpg" alt="Forest" width="600" height="400">
+              </a>
+              <div class="desc">WhyteCliff Park</div>
+            </div>
+            
+            <div class="gallery">
+              <a target="_blank" href="images/hous.jpg">
+                <img src="images/hous.jpg" alt="Northern Lights" width="600" height="400">
+              </a>
+              <div class="desc">Smoke Park</div>
+            </div>
+            
+            <div class="gallery">
+              <a target="_blank" href="images/mahog.jpg">
+                <img src="images/mahog.jpg" alt="Mountains" width="600" height="400">
+              </a>
+              <div class="desc">Horseshoe Bay</div>
+            </div>
+            </div>
 
-
+            <div class="nav">
+                <li><a href="index.html">Homepage</a></li>
+            </div>
+            <style>
+                .nav   {
+                    text-align: center;
+                    list-style-type: none;
+                    margin: 0;
+                    padding-top: 50px;
+                }
+                .nav li {
+                    display:inline-block;    
+                    
+                }
+                .nav li a {
+                    background-color:#7f7f7f;
+                    font-size: 24px;
+                    display: block;
+                    padding: 8px;
+                    padding-left: 199px;
+                    padding-right: 199px;
+                    border-radius: 1px;
+                    transition: background-color 0.5s;
+                    opacity: 0.7;
+                }
+                .nav li a:hover   {
+                    background-color: #707070; 
+                }
+            </style>
 
 </body>
 </html>
