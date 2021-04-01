@@ -68,8 +68,8 @@ a:active {
 
      @font-face {
         font-family: 'titillium_webblack';
-        src: url('./WebFontKit/titilliumweb-black-webfont.woff2') format('woff2'),
-             url('titilliumweb-black-webfont.woff') format('woff');
+        src: url('../18vmck.github.io/WebFontKit/titilliumweb-black-webfont.woff2') format('woff2'),
+             url('../18vmck.github.io/WebFontKit/titilliumweb-black-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     
@@ -80,8 +80,8 @@ a:active {
     
     @font-face {
         font-family: 'titillium_webblack';
-        src: url('./WebFontKit/titilliumweb-black-webfont.woff2') format('woff2'),
-             url('./WebFontKit/titilliumweb-black-webfont.woff') format('woff');
+        src: url('../18vmck.github.io/WebFontKit/titilliumweb-black-webfont.woff2') format('woff2'),
+             url('../18vmck.github.io/WebFontKit/titilliumweb-black-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     
@@ -92,8 +92,8 @@ a:active {
     
     @font-face {
         font-family: 'titillium_webbold';
-        src: url('./WebFontKit/titilliumweb-bold-webfont.woff2') format('woff2'),
-             url('./WebFontKit/titilliumweb-bold-webfont.woff') format('woff');
+        src: url('../18vmck.github.io/WebFontKit/titilliumweb-bold-webfont.woff2') format('woff2'),
+             url('../18vmck.github.io/WebFontKit/titilliumweb-bold-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     
@@ -116,8 +116,8 @@ a:active {
     
     @font-face {
         font-family: 'titillium_webextralight';
-        src: url('./WebFontKit/titilliumweb-extralight-webfont.woff2') format('woff2'),
-             url('./WebFontKit/titilliumweb-extralight-webfont.woff') format('woff');
+        src: url('../18vmck.github.io/WebFontKit/titilliumweb-extralight-webfont.woff2') format('woff2'),
+             url('../18vmck.github.io/WebFontKit/titilliumweb-extralight-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     
