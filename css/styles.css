@@ -59,7 +59,8 @@ a:visited {
         color: #ffffff;
       }
 a:hover {
-        color: #daecfc;
+        color: #a7d6ff;
+        transition-duration: 0.5s;
       }
 a:active {
           color: #ffffff;
