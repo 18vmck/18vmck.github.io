@@ -66,6 +66,25 @@ a:active {
           color: #ffffff;
       }
 
+        .wrapWrap   {
+        text-align: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    p.footer    {
+        padding-bottom: 5px;
+    }
+    .wrapScorch p{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    img.scorch {
+        width: auto;
+        height: 20px;
+    }
+
 /*! Adding custom fonts*/
     
     @font-face {
