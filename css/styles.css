@@ -108,8 +108,8 @@ a:active {
     }
     .info li {
         display:inline-block;    
-
         width: 12rem;
+        padding: 0;
     }
     .info li a {
         background-color:#000000;
