@@ -16,8 +16,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="icon" href="images/scorchCircle.ico">
     </head>
-<body>
-    
+<body width="device-width">
     
     <div class="heading" >
             <p class="name">Vanya Kootchin</p>
@@ -27,6 +26,7 @@
        .heading {
            text-align: center;
            font-size: 22px;
+           position: relative;
        }
        .heading p   {
            display: inline-block;
@@ -35,8 +35,6 @@
        .heading p.name {
            font-family: 'TilXL';
            font-size: 50px;
-           padding-right: 50px;
-
        }
    </style>
  <img class="banner" src="images/LandscapeSide.jpg" alt="">
@@ -45,6 +43,8 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        object-fit: scale-down; 
+        max-width: 100%;
         width: 1200px;
         height: 337px;
         object-fit: cover;
