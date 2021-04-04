@@ -12,7 +12,7 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
 
 
 body {
-    background-color: #fffffffa;
+    background-color: #ffffff;
     }
 h1 { 
     font-family: 'TilXL';
@@ -23,41 +23,6 @@ h1 {
     font-weight: lighter;
     line-height: 0px; 
 }
-h2   {
-    color: rgb(0, 0, 0);
-    
-    }
-h3  {
-    color: rgb(0, 0, 0);
-    
-}
-p    {
-    color: rgb(54, 54, 54);
-    
-    }
-form    {
-    background-color: rgb(255, 253, 253);
-}
-input    {
-    background-color: #d3aa93; 
-    border: 1px solid rgb(255, 255, 255);
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 1px;
-    transition-duration: 0.4s;
-}
-input:hover {
-    background-color: #dfbba6; 
-    color: rgb(255, 255, 255);
-}
-canvas { 
-    background:  rgb(212, 212, 212);; display: block; margin: 0 auto;
-    border: 1px solid #000000;
-     }
-
 a   {
     font-family: 'TilXL';
     transition: color .5s;
@@ -102,13 +67,14 @@ a:active {
         list-style-type: none;
         margin-left: auto;
         margin-right: auto;
-        height: auto;
         background-color: #000000;
         opacity: 0.7;
     }
     .info li {
         display:inline-block;    
-        width: 12rem;
+        object-fit: scale-down; 
+        max-width: 100%;
+        width: clamp(2rem);
         padding: 0;
     }
     .info li a {
@@ -120,8 +86,7 @@ a:active {
         border-radius: 1px;
         transition: background-color 0.5s;
         opacity: 0.7;
-        object-fit: scale-down; 
-        max-width: 100%;
+        
     }
     .info li a:hover   {
         background-color: #707070; 
