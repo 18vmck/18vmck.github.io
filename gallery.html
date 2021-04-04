@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <meta name="viewport" content="width=device-width initial-scale=1">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="cleartype" content="on">
@@ -16,24 +16,25 @@
         <link rel="icon" href="images/scorchCircle.ico">
     </head>
 <body>
-  <div class="info">
+  <div class="navbar">
     <li><a href="index.html">Homepage</a></li>
   </div>
-
+  <p style="padding-top: 30pt;"></p>
     <style>
         div.wrapper {
             text-align: center;
+            
+           
         }
         div.gallery {
-          margin: 5px;
           border: 0px solid #ccc;
           display: inline-block;
           width: 150px;
           height: 150px;
-          padding: 20px;
+          padding: 2vw;
           padding-left: 20px;
           padding-right: 20px;
-         
+          z-index: -1 !important;
         }
         
         div.gallery img {
@@ -41,15 +42,18 @@
           object-fit: cover;
           transition: opacity .5s ease-in-out, filter .5s ease-in-out;
           overflow: hidden;
+          padding: 2%;
         }
-
+        /*
         div.gallery img:hover {
           opacity: 0.5;
           filter: blur(1px);
+          
         }
+        */
         
         div.desc {
-          padding: 15px;
+          padding: 12pt;
           text-align: center;
           font-family: 'TilXL';
         }
