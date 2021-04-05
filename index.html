@@ -106,7 +106,7 @@
 
    
 
-    <div class="ContactInfo"></p><p style="font-family: 'TilXL'; padding-top: 25px; font-weight: 100; "> Vancouver, British Columbia</p></div>
+    <div class="ContactInfo"></p><p style="font-family: 'TilXL'; padding-top: 25px; font-weight: 100; margin-bottom: 25pt; "> Vancouver, British Columbia</p></div>
 
     <!--
 <div class="line"></div>
@@ -120,7 +120,6 @@
 </style>
 -->
 
-<br><br><br>
 <!--
     Making the animated skills table
 -->   
@@ -209,7 +208,7 @@
                 }
                 #skills th  {
                     font-family: 'Tilreg';
-                    width: clamp(102pt, 20vw, 170pt);
+                    width: clamp(100pt,35vw, 170pt);
                     font-size: 12pt;
                     padding-top: 2%;
                     margin: 10%;
@@ -217,33 +216,131 @@
                     font-size: clamp(8pt, 2vw, 12pt);
                 }
                 #oop   {
-                    /*#00c78d*/
                     background-image: linear-gradient(to right,#00c78fca, #46e7ba);
-                    width: 57%;
                 }
                 #idev {
-                    /*#283d68*/
                     background-image: linear-gradient(to right,#283d68, #4d618a);
-                    width: 32%;
                 }
                 #com  {
-                    /*#00a3aa*/
                     background-image: linear-gradient(to right,#00a4aada, #7feaee);
-                    width: 71%;
                 }
                 #swrt  {
-                    /*#7f5d38*/
                     background-image: linear-gradient(to right,#7f5d38, #92795e);
-                    width: 62%;
                 }
                 #gitwork   {
-                    /*#220f4a*/
                     background-image: linear-gradient(to right,#220f4a, #665096);
+                }
+                #oop.active   {
+                    transition: background-image 1s, width 1s ease-in-out;
+                    width: 57%;
+                    transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+                }
+                #idev.active {
+                    transition: background-image 1s, width 1s ease-in-out;
+                    width: 32%;
+                    transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+                }
+                #com.active  {
+                    transition: background-image 1s, width 1s ease-in-out;
+                    width: 71%;
+                    transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+                }
+                #swrt.active  {
+                    transition: background-image 1s, width 1s ease-in-out;
+                    width: 62%;
+                    transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+                }
+                #gitwork.active   {
+                    transition: background-image 1s, width 1s ease-in-out;
                     width: 24%;
+                    transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
                 }
             </style>
+            <script>
+                function isInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            
+                );
+            }
+            
+            
+            const oop = document.querySelector('#oop');
+            const idev = document.querySelector('#idev')
+            const com = document.querySelector('#com')
+            const swrt = document.querySelector('#swrt')
+            const gitwork =document.querySelector('#gitwork')
+            //const message = document.querySelector('#message');
+            oopc = false;
+            idec = false;
+            comc = false;
+            swrc = false;
+            gitc = false;
+            document.addEventListener('scroll', function () {
+                // OOP
+                if (isInViewport(oop)) {
+                    if(!oopc)    {
+                    oop.className+="active";
+                    oopc=true;
+                    }
+                }
+                else    {
+                    oop.className="";
+                    oopc=false;
+                }
+                // IDEV
+                if (isInViewport(idev)) {
+                    if(!idec)    {
+                    idev.className+="active";
+                    idec=true;
+                    }
+                }
+                else    {
+                    idev.className="";
+                    idec=false;
+                }
+                // COM
+                if (isInViewport(com)) {
+                    if(!comc)    {
+                    com.className+="active";
+                    comc=true;
+                    }
+                }
+                else    {
+                    com.className="";
+                    comc=false;
+                }
+                // SWRT
+                if (isInViewport(swrt)) {
+                    if(!swrc)    {
+                    swrt.className+="active";
+                    swrc=true;
+                    }
+                }
+                else    {
+                    swrt.className="";
+                    swrc=false;
+                }
+                // GITWORK
+                if (isInViewport(gitwork)) {
+                    if(!gitc)    {
+                    gitwork.className+="active";
+                    gitc=true;
+                    }
+                } else    {
+                    gitwork.className="";
+                    gitc=false;
+                }
+            
+            }, {passive: true});
+            </script>
         </p>
     </div>
+
     <div id="blockitem">
         <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt;">Projects:</h1>
         <div id="skillsContline"></div>
@@ -294,6 +391,16 @@
                 #WSP    {
                     background-image: linear-gradient(to right,#fd6b28, #fd6b28, #264de4);
                 }
+                #ICP.active {
+                    opacity: 1;
+                    padding: 2pt;
+                }
+                #CLP.active {
+                    opacity: 1;
+                }
+                #WSP.active {
+                    opacity: 1;
+                }
                 #projects h3 {
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                     font-weight: normal;
@@ -316,6 +423,8 @@
                 #projects p {
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                     padding: 2pt;
+                    width: auto;
+                    opacity: 0.9;
                 }
                 #projects th    {
                     padding: 0px;
@@ -335,6 +444,7 @@
                     height: 10pt;
                 }
             </style>
+          
         </div>
     </div>
 
@@ -401,7 +511,6 @@
     </div>
 </div>
 
-
 <style>
     #skillsContainer    {
         margin-top: 5%;
@@ -444,7 +553,6 @@
          responsible for the graph bar attributes across the page 
          
          Changes here affect every bar
-
          */
         text-align: center;
         padding: 4pt;
@@ -456,7 +564,8 @@
         opacity: 0.9;
         position: relative;
         z-index: 0;
-        transition: filter .2s, opacity 0.2s;
+        transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+        width: 1%;
     }
     .profs p:hover  {
         filter: brightness(130%);
@@ -464,31 +573,137 @@
         filter: drop-shadow(1pt 1pt 1pt #a8a8a8);
     }
     #java   {
-        /*#F8981D*/
         background-image: linear-gradient(to right,#fd6b28, #ff9100);
-        width: 72%;
     }
     #python {
-        /*#336E9D*/
         background-image: linear-gradient(to right,#339d7a, #4b88b9);
-        width: 47%;
     }
     #shell  {
-        /*#293036*/
         background-image: linear-gradient(to right,#293036, #596b75);
-        width: 57%;
     }
     #c  {
-        /*#004482*/
         background-image: linear-gradient(to right,#004482, #1878b8);
-        width: 62%;
     }
     #html   {
-        /*#E44D26*/
         background-image: linear-gradient(to right,#E44D26, #ff8640);
-        width: 42%;
     }
-</style>
+    #java.active    {
+        transition: background-image 1s, width 1s ease-in-out;
+        width: 72%;
+        transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+    }
+    #python.active {
+        transition: background-image 1s, width 1s ease-in-out;
+        width: 35%;
+        transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+    }
+    #shell.active  {
+        transition: background-image 1s, width 1s ease-in-out;
+        width: 57%;
+        transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+    }
+    #c.active  {
+        transition: background-image 1s, width 1s ease-in-out;
+        width: 62%;
+        transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+    }
+    #html.active   {
+        transition: background-image 1s, width 1s ease-in-out;
+        width: 42%;
+        transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
+    }
 
+
+
+</style>
+<script>
+    function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+
+    );
+}
+
+
+const java = document.querySelector('#java');
+const python = document.querySelector('#python')
+const shell = document.querySelector('#shell')
+const c = document.querySelector('#c')
+const html =document.querySelector('#html')
+//const message = document.querySelector('#message');
+jc = false;
+pc = false;
+sc = false;
+cc = false;
+hc = false;
+
+document.addEventListener('scroll', function () {
+    // JAVA
+    if (isInViewport(java)) {
+        if(!jc)    {
+        java.className+="active";
+        jc=true;
+        }
+    }
+    else    {
+        java.className="";
+        jc=false;
+    }
+
+    // PYTHON
+    if (isInViewport(python)) {
+        if(!pc)    {
+        python.className+="active";
+        pc=true;
+        }
+    }
+    else    {
+        python.className="";
+        pc=false;
+    }
+
+    // SHELL
+    if (isInViewport(shell)) {
+        if(!sc)    {
+        shell.className+="active";
+        sc=true;
+        }
+    }
+    else    {
+        shell.className="";
+        sc=false;
+    }
+
+    // C
+    if (isInViewport(c)) {
+        if(!cc)    {
+        c.className+="active";
+        cc=true;
+        }
+    }
+    else    {
+        c.className="";
+        cc=false;
+    }
+
+    // HTML
+    if (isInViewport(html)) {
+        if(!hc)    {
+        html.className+="active";
+        hc=true;
+        }
+    }
+    else    {
+        html.className="";
+        hc=false;
+    }
+
+
+}, {passive: true});
+</script>
 </body>
 </html>
