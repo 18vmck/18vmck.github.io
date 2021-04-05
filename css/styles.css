@@ -28,6 +28,7 @@ a   {
     transition: color .5s;
 }
 
+/*LinkStyle for the site*/
 a:link {
         color: #ffffff;
         text-decoration: none;
@@ -43,24 +44,6 @@ a:active {
           color: #ffffff;
       }
 
-        .wrapWrap   {
-        text-align: center;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-    p.footer    {
-        padding-bottom: 5px;
-    }
-    .wrapScorch p{
-        display: inline-block;
-        vertical-align: middle;
-    }
-    img.scorch {
-        width: auto;
-        height: 20px;
-    }
 /*Grey color code: #4d4d4d */
     .navbar   {
         text-align: center;
@@ -73,6 +56,7 @@ a:active {
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
+        filter: drop-shadow(0pt 0.1pt 5pt #4d4d4d);
     }
     .navbar li {
         display:inline-block;    

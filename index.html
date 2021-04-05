@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="icon" href="images/scorchCircle.ico">
     </head>
-<body width="device-width">
+<body width="device-width" style="margin-bottom: 100pt;">
 
 
     <div class="navbar">
@@ -28,27 +28,10 @@
     
     <style>
         
- 
-    /* 
-    .info li {
-        background-color: #7f7f7f; 
-        border: 1px solid rgb(255, 255, 255);
-        padding: 24px 12px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        border-radius: 10px;
-        transition-duration: 0.4s;
-        display: inline-block;
-        width: 10%;
-        padding: 10px;
-        transition-duration: 1s;
-    } 
-    */ 
     </style>
     <div class="heading" >
             <p class="name">Vanya Kootchin</p>
-            <p style="font-family: 'TilXLItalic'; padding: 10px;">    Computer Engineering Student at Queen's University</p>
+            <p style="font-family: 'TilXLItalic'; padding-left:  12pt;">    Computer Engineering Student at Queen's University</p>
     </div>
    <style>
        .heading {
@@ -60,25 +43,29 @@
        .heading p   {
            display: inline-block;
            text-align: center;
+           font-size: clamp(10pt, 4vw, 20pt);
        }
        .heading p.name {
            font-family: 'TilXL';
-           font-size: 50px;
+           font-size: clamp(35pt, 4vw, 40pt)
        }
    </style>
- <img class="banner" src="images/LandscapeSide.jpg" alt="">
+   <div id="bannerWraper1">
+    <img class="banner" src="images/LandscapeSideCroppedProper.jpg" alt="">
+   </div>
+
  <style>
+     #bannerWrapper1    {
+        margin-right: 2%;
+        margin-left: 100pt;
+     }
     img.banner {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        object-fit: scale-down; 
-        text-align: center;
+
+
+        width: 100%;
         max-width: 100%;
-        width: 1200px;
-        height: 337px;
-        object-fit: cover;
-        padding-bottom: 2%;
+        height: auto; 
+        padding-bottom: 10pt;
     }
 </style>
 
@@ -93,8 +80,7 @@
         padding: 0;
         font-size: clamp(16px, 4vw, 24px);
         font-family: 'TilXL';
-        padding-bottom: 2%;
-        
+        padding-top: clamp(16px, 4vw, 24px);
     }
     .ContactInfo p   {
         display: inline-block;
@@ -106,7 +92,7 @@
         font-size: clamp(2rem);
     }
     .ContactInfo a   {
-        transition: color .5s;
+    transition: color .5s;
     }
     .ContactInfo a:link {
     color:#192734;
@@ -119,68 +105,253 @@
 
    
 
-    <div class="ContactInfo"></p><p style="font-family: 'TilXL'; padding-top: 25px;"> Vancouver, British Columbia</p></div>
+    <div class="ContactInfo"></p><p style="font-family: 'TilXL'; padding-top: 25px; font-weight: 100; "> Vancouver, British Columbia</p></div>
+
     <!--
-    <i class="material-icons">cloud</i>
-    <i class="material-icons">favorite</i>
-    <i class="material-icons">attachment</i>
-    <i class="material-icons">computer</i>
-    <i class="material-icons">traffic</i>
-    -->
-      <!--
-    <div class="wrapWrap">
-        <div class="wrapScorch">
-            <p><img class="scorch" src="images/scorchCircle.ico" alt=""></p>
-            <p class="footer" style="font-family: TilXL;">Vanya Kootchin</p>
-        </div>
-    </div>
--->
-<!--
-<h1 class="About">About</h1>
-<ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>3</li>
-</ul>
+<div class="line"></div>
 <style>
-    .About  {
-        text-align: center;
-    }
-    ul  {
-        text-align: center;
+    .line   {
+        background-color: #4d4d4d;
+        width: vw;
+        height: 5pt;
+        filter: drop-shadow(0pt 0pt 1pt #4d4d4d);
     }
 </style>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 -->
-</body>
 
+<br><br><br>
+<!--
+    Making the animated skills table
+-->   
+
+ <div id="skillsContainer">
+    <div id="blockitem">
+        <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt; ">Skills:</h1>
+        <div id="skillsContline"></div>
+    <table id="vertical-1" class="profs">
+        <tr>
+            <th>Java</th>
+            <td>
+                <p id="java"></p>
+            </td>
+        </tr>
+        <tr>
+            <th>Python</th>
+            <td>
+                <p id="python"></p>
+            </td>
+        </tr>
+        <tr>
+            <th>Shell</th>
+            <td>
+                <p id="shell"></p>
+            </td>
+        </tr>
+        <tr>
+            <th>C/C++</th>
+            <td>
+                <p id="c"></p>
+            </td>
+        </tr>
+        <tr>
+            <th>HTML/CSS</th>
+            <td>
+                <p id="html"></p>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <div id="blockitem">
+        <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt;">Projects:</h1>
+        <div id="skillsContline"></div>
+        <div id="projects">
+            <h3>Iterative Web Scraping Project</h3>
+            <p id="desc">
+            The creation of a Python based webscraper that searched Amazon and reported results based on a self-concevied formula that compared review number to price and similarity to search query.
+            </p>
+            <table id="vertical-1" class="profs">
+                <tr>
+                    <th>Python</th>
+                    <td><p class="percenter" id="ICP"></p></td>
+                    <th id="second">Shell</th>
+                </tr>
+            </table>
+
+            <h3>Cryptographic Login</h3>
+            <p id="desc">
+                Created an encrypted login G.U.I. glued with Bash using a custom Java library and discrete mathematics based cryptography.
+                </p>
+                <table id="vertical-1" class="profs">
+                    <tr>
+                        <th>Java</th>
+                        <td><p class="percenter" id="CLP"></p></td>
+                        <th id="second">Shell</th>
+                    </tr>
+                </table>
+
+            <h3>Website Creation</h3>
+            <p id="desc">
+                Built a custom website from the ground up. Foray into advanced CSS styling and HTML formatting. Hosted on a GitHub pages deployment. 
+                </p>
+                <table id="vertical-1" class="profs">
+                    <tr>
+                        <th>HTML</th>
+                        <td><p class="percenter" id="WSP"></p></td>
+                        <th id="second">CSS</th>
+                    </tr>
+                </table>
+
+            <style>
+                #ICP    {
+                    background-image: linear-gradient(to right,#339d53, #339d7a,#339d7a, #cea3ff);
+                }
+                #CLP    {
+                    background-image: linear-gradient(to right,#fd6b28, #ff9100, #cea3ff);
+                }
+                #WSP    {
+                    background-image: linear-gradient(to right,#fd6b28, #fd6b28, #264de4);
+                }
+                #projects h3 {
+                    font-family: 'Tilreg';
+                    margin-bottom: 2pt;
+                    text-align: left;
+                    padding-left: 0pt;
+                }
+                #projects #desc {
+                    font-size: 10pt;
+                }
+                #projects p {
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    padding: 0pt;
+                }
+                #projects th    {
+                    padding: 0px;
+                    text-align: right;
+                    width: 50pt;
+                    height: 10pt;
+                }
+                #projects #second {
+                    text-align: right;
+                    padding-right: 12pt;
+                }
+              
+                .percenter {
+                    text-align: center;
+                    background-color: #004482;
+                    width: calc(100%-200px);
+                    height: 10pt;
+                }
+            </style>
+        </div>
+    </div>
+    <div id="blockitem">
+        <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt;">Photography:</h1>
+        <div id="skillsContline"></div>
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 16pt;">
+            See the gallery for a look at images.
+           
+        </p>
+        
+        <style>
+            #blockimage {
+                margin-left: auto;
+                margin-right: auto;
+                width: auto;
+                height: 100%;
+                max-height: 200pt;
+                padding-bottom: 10pt;
+                filter: blur(10pt);
+            }
+        </style>
+    </div>
+    <div id="blockitem">
+        <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt;">About:</h1>
+        <div id="skillsContline"></div>
+        <div id="about">
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 5pt; font-size: 16pt;">
+                A Computer Engineering student currently studying at Queen's University with a specialization in Software Development. Interested in photography, mountain biking, chess, and tennis.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    #skillsContainer    {
+        margin-top: 50pt;
+        margin-right: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+    #skillsContline {
+        background-color: #4d4d4d;
+        width: vw;
+        height: 5pt;
+        opacity: 0.3;
+    }
+    #blockitem  {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 24pt;
+        max-width: 800pt;
+        width: 100%;
+        text-align: left;
+        max-height: 400pt;
+    }
+    table{
+        table-layout: fixed;
+        text-align: left;
+        width: 100%;
+        max-width: 920pt;
+        margin-bottom: 20pt;
+    }
+    .profs th    {
+        font-family: 'Tilreg';
+        width: 65pt;
+        font-size: 13pt;
+        padding-top: 2%;
+        margin: 10%;
+    }
+    .profs td p {
+        text-align: center;
+        padding: 8pt;
+        border-style:solid;
+        border-width: 0pt;
+        border-radius: 50pt;
+        margin-left: 20pt;
+        margin-top: 10pt;
+        opacity: 0.9;
+        position: relative;
+        z-index: -1;
+    }
+    #java   {
+        /*#F8981D*/
+        background-image: linear-gradient(to right,#fd6b28, #ff9100);
+        width: 72%;
+        
+    }
+    #python {
+        /*#336E9D*/
+        background-image: linear-gradient(to right,#339d7a, #4b88b9);
+        width: 47%;
+    }
+    #shell  {
+        /*#293036*/
+        background-image: linear-gradient(to right,#293036, #596b75);
+        width: 57%;
+    }
+    #c  {
+        /*#004482*/
+        background-image: linear-gradient(to right,#004482, #1878b8);
+        width: 62%;
+    }
+    #html   {
+        /*#E44D26*/
+        background-image: linear-gradient(to right,#E44D26, #ff8640);
+        width: 42%;
+    }
+</style>
+
+</body>
 </html>
