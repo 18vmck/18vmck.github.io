@@ -92,13 +92,14 @@
         font-size: clamp(2rem);
     }
     .ContactInfo a   {
-    transition: color .5s;
+    transition: color .5s, font-size .3s ease-in-out;
     }
     .ContactInfo a:link {
     color:#192734;
     }
     .ContactInfo a:hover {
     color: #7e97ad;
+    font-size: 20pt;
     }
 </style>
 
@@ -126,7 +127,7 @@
 
  <div id="skillsContainer">
     <div id="blockitem">
-        <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt; ">Skills:</h1>
+        <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt; ">Proficiencies:</h1>
         <div id="skillsContline"></div>
     <table id="vertical-1" class="profs">
         <tr>
@@ -160,6 +161,88 @@
             </td>
         </tr>
     </table>
+ 
+    </div>
+    <div id="blockitem">
+        <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt;">Skills:</h1>
+        <div id="skillsContline"></div>
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 11pt;">
+        <div id="skills">
+            <table id="vertical-1" class="profs">
+                <tr>
+                    <th>Object-Oriented Programming</th>
+                    <td>
+                        <p id="oop"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Iterative Development</th>
+                    <td>
+                        <p id="idev"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Communication</th>
+                    <td>
+                        <p id="com"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Scientific Writing</th>
+                    <td>
+                        <p id="swrt"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>GitHub Workflow</th>
+                    <td>
+                        <p id="gitwork"></p>
+                    </td>
+                </tr>
+            </table>
+  
+        </div>
+            <style>
+                #skills 
+                {
+                    vertical-align: center;
+                }
+                #skills th  {
+                    font-family: 'Tilreg';
+                    width: clamp(102pt, 20vw, 170pt);
+                    font-size: 12pt;
+                    padding-top: 2%;
+                    margin: 10%;
+                    margin-top: 0pt;
+                    font-size: clamp(8pt, 2vw, 12pt);
+                }
+                #oop   {
+                    /*#00c78d*/
+                    background-image: linear-gradient(to right,#00c78fca, #46e7ba);
+                    width: 57%;
+                }
+                #idev {
+                    /*#283d68*/
+                    background-image: linear-gradient(to right,#283d68, #4d618a);
+                    width: 32%;
+                }
+                #com  {
+                    /*#00a3aa*/
+                    background-image: linear-gradient(to right,#00a4aada, #7feaee);
+                    width: 71%;
+                }
+                #swrt  {
+                    /*#7f5d38*/
+                    background-image: linear-gradient(to right,#7f5d38, #92795e);
+                    width: 62%;
+                }
+                #gitwork   {
+                    /*#220f4a*/
+                    background-image: linear-gradient(to right,#220f4a, #665096);
+                    width: 24%;
+                }
+            </style>
+        </p>
     </div>
     <div id="blockitem">
         <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt;">Projects:</h1>
@@ -167,7 +250,7 @@
         <div id="projects">
             <h3>Iterative Web Scraping Project</h3>
             <p id="desc">
-            The creation of a Python based webscraper that searched Amazon and reported results based on a self-concevied formula that compared review number to price and similarity to search query.
+            The creation of a Python based webscraper that reported results based on a self-concevied formula comparing review data to price point.
             </p>
             <table id="vertical-1" class="profs">
                 <tr>
@@ -212,16 +295,23 @@
                     background-image: linear-gradient(to right,#fd6b28, #fd6b28, #264de4);
                 }
                 #projects h3 {
-                    font-family: 'Tilreg';
-                    margin-bottom: 2pt;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: normal;
+                    text-decoration: underline;
+                    text-decoration-color: #cacaca;
+                    text-decoration-style: solid;
+                    text-decoration-thickness: 2pt;
                     text-align: left;
+                    margin-bottom: 2pt;
                     padding: 2%;
                     padding-left: 0pt;
                     padding-bottom: 0%;
                 }
                 #projects #desc {
+                    text-align: left;
                     font-size: 10pt;
                     padding-left: 0;
+                    font-style: italic;
                 }
                 #projects p {
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -229,7 +319,7 @@
                 }
                 #projects th    {
                     padding: 0px;
-                    text-align: right;
+                    text-align: left;
                     width: 50pt;
                     height: 10pt;
                 }
@@ -247,26 +337,7 @@
             </style>
         </div>
     </div>
-    <div id="blockitem">
-        <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt;">Photography:</h1>
-        <div id="skillsContline"></div>
-        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 11pt;">
-            See the gallery for a look at images.
-           
-        </p>
-        
-        <style>
-            #blockimage {
-                margin-left: auto;
-                margin-right: auto;
-                width: auto;
-                height: 100%;
-                max-height: 200pt;
-                padding-bottom: 10pt;
-                filter: blur(10pt);
-            }
-        </style>
-    </div>
+
     <div id="blockitem">
         <h1  style="padding: 0; font-size: clamp(30pt, 4vw, 40pt); margin-bottom: 24pt;">About:</h1>
         <div id="skillsContline"></div>
@@ -274,6 +345,58 @@
             <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 5pt; font-size: 11pt;">
                 A Computer Engineering student currently studying at Queen's University with a specialization in Software Development. Interested in photography, mountain biking, chess, and tennis.
             </p>
+            <div id="imWrap">
+                <p>
+                    <a href="https://www.instagram.com/vanya.kootchin/">         <img src="images/greenTop2.jpg" alt="" id="personalPic"></a>
+                </p>
+                <p id="desc">
+                   A work in progress.
+                </p>
+            </div>
+            <style>
+
+                #imWrap {
+                   text-align: center;
+                   margin-right: 2%;
+                    margin-left: 2%;
+                    margin-top: 50pt;
+                }
+                #imWrap p {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 8pt;
+                }
+                #imWrap #desc   {
+                    text-align: left;
+                    color: #000000;
+                    background-image:  linear-gradient(to right,#cccccc, #bec2c1);
+                    margin-top: 60pt;
+                    border-radius: 8pt;
+                    font-family: 'Tilreg';
+                    width: 50pt;
+                    transition: filter .3s;
+                }
+                #personalPic    {
+                    margin-top: 5%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 150pt;
+                    height: auto;
+                    border-radius: 50pt;
+                    border-width: 200pt;
+                    border-color: #8aa3bb;
+                    transition: filter .3s, border-radius .3s ease-in-out;
+                }
+                #personalPic:hover  {
+                    filter: drop-shadow(3pt 3pt 1pt #a8a8a8);
+                    border-radius: 45pt;
+                    filter: brightness(102%);
+                }
+                #imWrap #desc:hover {
+                    filter: drop-shadow(3pt 3pt 1pt #a8a8a8);
+                }
+            </style>
         </div>
     </div>
 </div>
@@ -281,17 +404,16 @@
 
 <style>
     #skillsContainer    {
-        margin-top: 50pt;
+        margin-top: 5%;
         margin-right: 2%;
         margin-left: 2%;
         margin-bottom: 2%;
         text-align: center;
     }
     #skillsContline {
-        background-color: #4d4d4d;
+        background-color: #cacaca;
         width: vw;
         height: 5pt;
-        opacity: 0.3;
     }
     #blockitem  {
         display: inline-block;
@@ -312,27 +434,39 @@
     .profs th    {
         font-family: 'Tilreg';
         width: 65pt;
-        font-size: 13pt;
+        font-size: 12pt;
         padding-top: 2%;
         margin: 10%;
+        margin-top: 0pt;
     }
     .profs td p {
+         /* THIS IS THE BIG BOI, 
+         responsible for the graph bar attributes across the page 
+         
+         Changes here affect every bar
+
+         */
         text-align: center;
-        padding: 8pt;
+        padding: 4pt;
         border-style:solid;
         border-width: 0pt;
-        border-radius: 50pt;
+        border-radius: 10pt;
         margin-left: 20pt;
         margin-top: 10pt;
         opacity: 0.9;
         position: relative;
-        z-index: -1;
+        z-index: 0;
+        transition: filter .2s, opacity 0.2s;
+    }
+    .profs p:hover  {
+        filter: brightness(130%);
+        opacity: 1;
+        filter: drop-shadow(1pt 1pt 1pt #a8a8a8);
     }
     #java   {
         /*#F8981D*/
         background-image: linear-gradient(to right,#fd6b28, #ff9100);
         width: 72%;
-        
     }
     #python {
         /*#336E9D*/

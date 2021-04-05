@@ -50,6 +50,7 @@ a:active {
         list-style-type: none;
         background-color: #4d4d4d;
         position: fixed;
+        z-index: 1;
         top: 0;
         width: 100%;
         margin-bottom: 25pt;
@@ -72,11 +73,8 @@ a:active {
         padding-left: 3vw;
         padding-right: 3vw;
         border-radius: 1px;
-        transition: background-color 0.5s;        
     }
-    .navbar li a:hover   {
-        background-color: #707070; 
-    }
+  
 
 /*! Adding custom fonts*/
     
