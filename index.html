@@ -257,85 +257,31 @@
                 }
             </style>
             <script>
-                function isInViewport(el) {
-                const rect = el.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            
-                );
-            }
-            
-            
-            const oop = document.querySelector('#oop');
-            const idev = document.querySelector('#idev')
-            const com = document.querySelector('#com')
-            const swrt = document.querySelector('#swrt')
-            const gitwork =document.querySelector('#gitwork')
-            //const message = document.querySelector('#message');
-            oopc = false;
-            idec = false;
-            comc = false;
-            swrc = false;
-            gitc = false;
+            const elements1 = 
+            [
+            document.querySelector('#oop'),
+            document.querySelector('#idev'),
+            document.querySelector('#com'),
+            document.querySelector('#swrt'),
+            document.querySelector('#gitwork')
+            ]
+            function isInViewport(el) {
+                    const rect = el.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                        );
+                }
+            function checkToActive(el)    {
+                    if (isInViewport(el)) 
+                        el.className="active";
+                    else 
+                        el.className="";
+                }
             document.addEventListener('scroll', function () {
-                // OOP
-                if (isInViewport(oop)) {
-                    if(!oopc)    {
-                    oop.className+="active";
-                    oopc=true;
-                    }
-                }
-                else    {
-                    oop.className="";
-                    oopc=false;
-                }
-                // IDEV
-                if (isInViewport(idev)) {
-                    if(!idec)    {
-                    idev.className+="active";
-                    idec=true;
-                    }
-                }
-                else    {
-                    idev.className="";
-                    idec=false;
-                }
-                // COM
-                if (isInViewport(com)) {
-                    if(!comc)    {
-                    com.className+="active";
-                    comc=true;
-                    }
-                }
-                else    {
-                    com.className="";
-                    comc=false;
-                }
-                // SWRT
-                if (isInViewport(swrt)) {
-                    if(!swrc)    {
-                    swrt.className+="active";
-                    swrc=true;
-                    }
-                }
-                else    {
-                    swrt.className="";
-                    swrc=false;
-                }
-                // GITWORK
-                if (isInViewport(gitwork)) {
-                    if(!gitc)    {
-                    gitwork.className+="active";
-                    gitc=true;
-                    }
-                } else    {
-                    gitwork.className="";
-                    gitc=false;
-                }
-            
+                elements1.forEach(checkToActive);
             }, {passive: true});
             </script>
         </p>
@@ -541,7 +487,6 @@
     .profs td p {
          /* THIS IS THE BIG BOI, 
          responsible for the graph bar attributes across the page 
-         
          Changes here affect every bar
          */
         text-align: center;
@@ -602,97 +547,33 @@
         width: 42%;
         transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
     }
-
-
-
 </style>
 <script>
-    function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-
-    );
-}
-
-
-const java = document.querySelector('#java');
-const python = document.querySelector('#python')
-const shell = document.querySelector('#shell')
-const c = document.querySelector('#c')
-const html =document.querySelector('#html')
-//const message = document.querySelector('#message');
-jc = false;
-pc = false;
-sc = false;
-cc = false;
-hc = false;
-
+const elements2 = 
+[
+document.querySelector('#java'),
+document.querySelector('#python'),
+document.querySelector('#shell'),
+document.querySelector('#c'),
+document.querySelector('#html')
+]
+function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+    }
+function checkToActive(el)    {
+        if (isInViewport(el)) 
+            el.className="active";
+        else 
+            el.className="";
+    }
 document.addEventListener('scroll', function () {
-    // JAVA
-    if (isInViewport(java)) {
-        if(!jc)    {
-        java.className+="active";
-        jc=true;
-        }
-    }
-    else    {
-        java.className="";
-        jc=false;
-    }
-
-    // PYTHON
-    if (isInViewport(python)) {
-        if(!pc)    {
-        python.className+="active";
-        pc=true;
-        }
-    }
-    else    {
-        python.className="";
-        pc=false;
-    }
-
-    // SHELL
-    if (isInViewport(shell)) {
-        if(!sc)    {
-        shell.className+="active";
-        sc=true;
-        }
-    }
-    else    {
-        shell.className="";
-        sc=false;
-    }
-
-    // C
-    if (isInViewport(c)) {
-        if(!cc)    {
-        c.className+="active";
-        cc=true;
-        }
-    }
-    else    {
-        c.className="";
-        cc=false;
-    }
-
-    // HTML
-    if (isInViewport(html)) {
-        if(!hc)    {
-        html.className+="active";
-        hc=true;
-        }
-    }
-    else    {
-        html.className="";
-        hc=false;
-    }
-
-
+    elements2.forEach(checkToActive);
 }, {passive: true});
 </script>
 </body>
