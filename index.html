@@ -16,8 +16,6 @@
         <link rel="icon" href="images/scorchCircle.ico">
     </head>
 <body width="device-width" style="margin-bottom: 100pt;">
-
-
     <div class="navbar">
         <li><a href="VanyaKootchin-Resume.pdf">Resume</a></li>
         <li><a href="https://linkedin.com/in/vanya-kootchin-a535b7198">LinkedIn</a></li>
@@ -51,7 +49,7 @@
        }
    </style>
    <div id="bannerWraper1">
-    <img class="banner" src="images/LandscapeSideCroppedProper.jpg" alt="">
+    <img class="banner" src="images/PSedDesktopPictureCropped.jpg" alt="">
    </div>
 
  <style>
@@ -256,34 +254,6 @@
                     transition: filter .2s, opacity 0.2s, width 0.5s ease-out;
                 }
             </style>
-            <script>
-            const elements1 = 
-            [
-            document.querySelector('#oop'),
-            document.querySelector('#idev'),
-            document.querySelector('#com'),
-            document.querySelector('#swrt'),
-            document.querySelector('#gitwork')
-            ]
-            function isInViewport(el) {
-                    const rect = el.getBoundingClientRect();
-                    return (
-                        rect.top >= 0 &&
-                        rect.left >= 0 &&
-                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                        );
-                }
-            function checkToActive(el)    {
-                    if (isInViewport(el)) 
-                        el.className="active";
-                    else 
-                        el.className="";
-                }
-            document.addEventListener('scroll', function () {
-                elements1.forEach(checkToActive);
-            }, {passive: true});
-            </script>
         </p>
     </div>
 
@@ -549,32 +519,37 @@
     }
 </style>
 <script>
-const elements2 = 
-[
-document.querySelector('#java'),
-document.querySelector('#python'),
-document.querySelector('#shell'),
-document.querySelector('#c'),
-document.querySelector('#html')
-]
-function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-    }
-function checkToActive(el)    {
-        if (isInViewport(el)) 
-            el.className="active";
-        else 
-            el.className="";
-    }
-document.addEventListener('scroll', function () {
-    elements2.forEach(checkToActive);
-}, {passive: true});
-</script>
+    const  elements1= 
+    [
+    document.querySelector('#java'),
+    document.querySelector('#python'),
+    document.querySelector('#shell'),
+    document.querySelector('#c'),
+    document.querySelector('#html'),
+    document.querySelector('#oop'),
+    document.querySelector('#idev'),
+    document.querySelector('#com'),
+    document.querySelector('#swrt'),
+    document.querySelector('#gitwork')
+    ]
+    function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+        }
+    function ifInViewPortActive(el)    {
+            if (isInViewport(el)) 
+                el.className="active";
+            else 
+                el.className="";
+        }
+    document.addEventListener('scroll', function () {
+        elements1.forEach(ifInViewPortActive);
+    }, {passive: true});
+    </script>
 </body>
 </html>
